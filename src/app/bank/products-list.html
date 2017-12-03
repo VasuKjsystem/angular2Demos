@@ -1,0 +1,214 @@
+<div class="row">
+    <div class="col-md-12">
+    <h3>Cash Projection Tool</h3>
+<div class="row">
+    <div class="col-md-12 col-lg-12">
+        <div class="col-md-2">
+            <label>Period</label>
+         <select class="form-control" name="sel">
+  <option *ngFor="let period of periods">
+    {{period.name}}
+  </option>
+</select>
+    </div>
+       <div class="col-md-2">
+            <label>Currency</label>
+         <select class="form-control" name="sel">
+  <option *ngFor="let currency of currenys">
+    {{currency.name}}
+  </option>
+</select>
+    </div>
+        <div class="col-md-8 col-lg-8" style="border:1px solid #ccc;width:65%">
+            <div class="row">
+                <div class="col-md-12">
+                <div class="col-md-3">
+                 <div class="form-group">
+        <label>
+        <input type="checkbox" [checked]="value1">Estimated
+        </label>
+    </div>
+                </div>
+                  <div class="col-md-3">
+                 <div class="form-group">
+        <label>
+        <input type="checkbox" [checked]="value2">Pending
+        </label>
+    </div>
+                </div>
+                      <div class="col-md-3">
+                 <div class="form-group">
+        <label>
+        <input type="checkbox" [checked]="value3">Pending(past vd)
+        </label>
+    </div>
+                </div>
+                      <div class="col-md-3">
+                 <div class="form-group">
+        <label>
+        <input type="checkbox" [checked]="value4">Lquidity fund Sweep
+        </label>
+    </div>
+                </div>
+                         <div class="col-md-3">
+                 <div class="form-group">
+        <label>
+        <input type="checkbox" [checked]="value5">Estimated (Past VD)
+        </label>
+    </div>
+                </div>
+                <div class="col-md-3">
+                 <div class="form-group">
+        <label>
+        <input type="checkbox" [checked]="value6">Investments settlement
+        </label>
+    </div>
+                </div>
+            
+               </div>
+</div>
+
+            
+            </div>
+        </div>
+</div>
+<div class="row">
+<div class="col-md-12">
+         <div class="col-md-2">
+                 <div class="form-group">
+        <label>
+        <input type="checkbox" [checked]="c1">Show/Hide transctions
+        </label>
+    </div>
+                </div> 
+         <div class="col-md-2">
+                 <div class="form-group">
+        <label>
+        <input type="checkbox" [checked]="c2">Only With the cash Differense
+        </label>
+    </div>
+                </div> 
+         <div class="col-md-2">
+                 <div class="form-group">
+        <label>
+        <input type="checkbox" [checked]="c3">Show/Hide Custodian
+        </label>
+    </div>
+                </div> 
+         <div class="col-md-2">
+                 <div class="form-group">
+        <label>
+        <input type="checkbox" [checked]="c4">Show/Hide JPM
+        </label>
+    </div>
+                </div> 
+         <div class="col-md-2">
+                 <div class="form-group">
+        <label>
+        <input type="checkbox" [checked]="c5">Only Over Draft
+        </label>
+    </div>
+                </div> 
+         <div class="col-md-2">
+                 <div class="form-group">
+        <label>
+        <input type="checkbox" [checked]="c6">Show Hide transctions
+        </label>
+    </div>
+                </div> 
+    
+</div>
+
+</div>
+    
+<div class="row">
+<div class="col-md-12">
+<table class="table table-striped">
+<thead>
+       <tr>
+      <th>Description</th>
+      <th>Instrument Name</th>
+      <th>Cash Online</th>
+      <th>T-1</th>
+    <th>T+0</th>
+        <th>T+1</th>
+      <th>T+2</th>
+          <th>T+3</th>
+          <th>T+4</th>
+    </tr> 
+    </thead>
+    <tbody>
+    <tr style="cursor:pointer" class="panel-heading" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" ng-init="collapseOne">
+        
+       <td>Client Account - Client Name</td> 
+        <td></td> 
+        <td>200000.00</td>
+        <td>00.00</td>
+        <td>200000.00</td>
+        <td>80000.00</td>
+        <td>80000.00</td>
+        <td>26546.00</td>
+        <td>26546.00</td>
+            
+    		<div id="collapseOne" class="panel-collapse collapse">
+      <div class="panel-body" style="height: 250px;">
+          
+                </div>
+        </div>
+    </tr>
+        <tr>
+       <td>Custodian DQA</td> 
+        <td></td> 
+        <td>200000.00</td>
+        <td>00.00</td>
+        <td>200000.00</td>
+        <td>80000.00</td>
+        <td>80000.00</td>
+        <td>26546.00</td>
+        <td>26546.00</td>
+        
+    </tr>
+            <tr>
+       <td>Client Account - Client Name</td> 
+        <td></td> 
+        <td>200000.00</td>
+        <td>00.00</td>
+        <td>200000.00</td>
+        <td>80000.00</td>
+        <td>80000.00</td>
+        <td>26546.00</td>
+        <td>26546.00</td>
+        
+    </tr>
+    
+    </tbody>
+ 
+
+</table>    
+    
+</div>        
+        
+</div>
+    </div>
+
+    
+</div>
+
+        <style>
+
+.panel-heading.accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'inherit'; 
+    content: "\005b\-\005d";    
+    font-size: 23px;
+    float: right; 
+     margin-top:2px   
+}
+.panel-heading.accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+     font-family:"inherit";
+    content: "\005b\+\005d"; 
+    font-size: 23px; 
+    margin-top:2px
+}
+</style>
